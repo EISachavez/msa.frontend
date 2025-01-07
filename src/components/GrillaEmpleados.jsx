@@ -1,8 +1,8 @@
 import axios from "axios";
-import { Container, Button } from '@mui/material';
+import { Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const columns = [
     { field: 'codigo', 
@@ -45,12 +45,22 @@ const columns = [
 export const GrillaEmpleados = () => {
   const [empleados, setEmpleados] = useState([]);
 
-  const getEmpleados = async () => {
-    const response = await axios.get("http://localhost:9099/api/v1/empleado/");
-    const data = response.data;
-    console.log(data);
-    setEmpleados(data);    
-  }
+  useEffect(() => {
+    const getEmpleados = async () => {
+        try{
+            const response = await axios.get("http://localhost:9099/api/v1/empleado/");
+            const data = response.data;
+            console.log(data);
+            setEmpleados(data);     
+        } catch (error) {
+            console.error(error);
+        }
+      };
+
+      getEmpleados();
+
+  }, []);
+  
 
   return (    
     <Container>        
@@ -68,8 +78,7 @@ export const GrillaEmpleados = () => {
             }}
             pageSizeOptions={[10]}    
         />
-        </Box>
-        <Button variant="contained" onClick={getEmpleados}>Botón</Button>
+        </Box>        
     </Container>
   )
 }
