@@ -85,7 +85,7 @@ export const ActualizaEmpleado = () => {
       <Box>
         <div>
           <Grid2 container spacing={2} columns={{ xs: 4, sm: 10, md: 10 }}>
-            <Grid2 size={6}>
+            <Grid2 size={8}>
               <Input
                 fullWidth
                 id="buscar-codigo"

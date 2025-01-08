@@ -8,6 +8,7 @@ import "./index.css";
 import App from "./App";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
+import { AppFooterBar } from "./components/AppFooterBar";
 
 const theme = createTheme({
   palette: {
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")).render(
       <StrictMode>
         <CssBaseline />
         <App />
+        <AppFooterBar />
       </StrictMode>
     </ThemeProvider>
   </BrowserRouter>
