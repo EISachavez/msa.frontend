@@ -28,13 +28,13 @@ const style = {
 
 export const EliminarEmpleado = () => {
   const [codigoEmp, setCodigoEmp] = useState("");
-  const { alerta, confirmacion, respuesta } = useAlertas();
+  const { alerta } = useAlertas();
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [empleado, setEmpleado] = useState({
+  const [empleado] = useState({
     codigo: 0,
     usuario: "",
     nombre: "",
@@ -50,7 +50,7 @@ export const EliminarEmpleado = () => {
 
   const btnEliminar = async () => {
     handleClose();
-
+    setCodigoEmp("");
     Swal.fire({
       title: "¿Confirma la eliminación del empleado?",
       icon: "warning",
