@@ -74,7 +74,7 @@ const useCreateEmpleadoHook = () => {
     let estado = 1;
     try {
       await axios
-        .post("http://localhost:9099/api/v1/empleado/", {
+        .post("https://msachavez-production.up.railway.app/api/v1/empleado/", {
           usuario: empleado.usuario,
           nombre: empleado.nombre,
           telefono: empleado.telefono,

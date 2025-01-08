@@ -44,7 +44,7 @@ export const GrillaEmpleados = () => {
     const getEmpleados = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:9099/api/v1/empleado/"
+          "https://msachavez-production.up.railway.app/api/v1/empleado/"
         );
         const data = response.data;
         console.log(data);

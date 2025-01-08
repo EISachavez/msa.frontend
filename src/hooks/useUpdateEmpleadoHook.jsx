@@ -70,7 +70,7 @@ const useUpdateEmpleadoHook = () => {
     let estado = 1;
     try {
       await axios
-        .put("http://localhost:9099/api/v1/empleado/", {
+        .put("https://msachavez-production.up.railway.app/api/v1/empleado/", {
           codigo: empleado.codigo,
           usuario: empleado.usuario,
           nombre: empleado.nombre,

@@ -40,7 +40,9 @@ export const ActualizaEmpleado = () => {
       return;
     }
     try {
-      let URI = "http://localhost:9099/api/v1/empleado/" + codigoEmp;
+      let URI =
+        "https://msachavez-production.up.railway.app/api/v1/empleado/" +
+        codigoEmp;
 
       await axios
         .get(URI)
