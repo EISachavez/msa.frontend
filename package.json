@@ -7,6 +7,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "start": "serve dist -s -n -L -p $PORT",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -33,6 +34,7 @@
     "react-dom": "^18.3.1",
     "react-router": "^7.1.1",
     "react-router-dom": "^7.1.1",
+    "serve": "^14.2.4",
     "styled-components": "^6.1.14",
     "sweetalert2": "^11.15.10",
     "sweetalert2-react-content": "^5.1.0"
