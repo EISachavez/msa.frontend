@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { AppTopBar } from "./components/AppTopBar";
 import { Route, Routes } from "react-router-dom";
-import { GrillaEmpleados } from "./components/grillaEmpleados";
+import { GrillaEmpleados } from "./components/GrillaEmpleados";
 import { CrearEmpleado } from "./components/CrearEmpleado";
 import { ActualizaEmpleado } from "./components/ActualizaEmpleado";
 import { EliminarEmpleado } from "./components/EliminarEmpleado";
